@@ -1,6 +1,6 @@
 from datetime import datetime
 from decimal import Decimal
-
+import re
 from pydantic import BaseModel, EmailStr, Field, field_validator
 
 
@@ -10,6 +10,17 @@ class ClientCreate(BaseModel):
     name: str = Field(..., min_length=2, max_length=255)
     email: EmailStr
     phone: str | None = Field(None, max_length=50)
+
+
+    @field_validator("phone")
+    @classmethod
+    def validate_phone(cls, v: str | None) -> str | None:
+        if v is None or v.strip() == "":
+            return None
+        cleaned = re.sub(r"\s+", "", v)
+        if not re.match(r"^\+?[0-9]{7,15}$", cleaned):
+            raise ValueError("Invalid phone format. Example: +380991234567")
+        return cleaned
 
 
 class ClientResponse(BaseModel):
