@@ -14,5 +14,13 @@ services:
       timeout: 10s
       retries: 3
 
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
 volumes:
   db_data:
