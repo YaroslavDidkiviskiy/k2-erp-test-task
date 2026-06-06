@@ -151,6 +151,7 @@ pytest -v
 **UUID як PK** — стандарт для ERP систем, уникає конфліктів при міграції даних між середовищами.
 
 ## Скріншоти
+<img width="1493" height="818" alt="image" src="https://github.com/user-attachments/assets/9ad91234-1801-4910-934d-59365852ffc5" />
 <img width="1915" height="905" alt="image" src="https://github.com/user-attachments/assets/63cc6d15-b3f3-4514-86c6-ab801d77efac" />
 <img width="1918" height="907" alt="image" src="https://github.com/user-attachments/assets/2da4f975-13a8-4dad-839c-3eb62551f888" />
 <img width="1913" height="901" alt="image" src="https://github.com/user-attachments/assets/54838fd3-0a7c-43cb-9950-572cb22351d4" />
