@@ -14,6 +14,7 @@
 - **Docker + Docker Compose** — контейнеризація
 
 ## Структура проєкту
+```text
 erp-orders/
 ├── app/
 │   ├── api/
@@ -61,6 +62,7 @@ erp-orders/
 ├── docker-compose.yml
 ├── requirements.txt
 └── .env.example
+```
 
 ## Запуск через Docker
 
