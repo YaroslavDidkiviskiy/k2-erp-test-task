@@ -17,38 +17,46 @@
 erp-orders/
 ├── app/
 │   ├── api/
-│   │   ├── deps.py              # залежності (get_db)
+│   │   ├── deps.py
 │   │   └── routers/
-│   │       ├── clients.py       # ендпоінти клієнтів
-│   │       ├── products.py      # ендпоінти товарів
-│   │       └── orders.py        # ендпоінти замовлень
+│   │       ├── clients.py
+│   │       ├── products.py
+│   │       └── orders.py
+│   │
 │   ├── core/
-│   │   ├── config.py            # налаштування (pydantic-settings)
-│   │   └── database.py          # engine, session, Base
+│   │   ├── config.py
+│   │   └── database.py
+│   │
 │   ├── models/
-│   │   └── models.py            # SQLAlchemy моделі
+│   │   └── models.py
+│   │
 │   ├── schemas/
-│   │   └── schemas.py           # Pydantic схеми
+│   │   └── schemas.py
+│   │
 │   ├── services/
-│   │   ├── client_service.py    # бізнес-логіка клієнтів
-│   │   ├── product_service.py   # бізнес-логіка товарів
-│   │   └── order_service.py     # бізнес-логіка замовлень
-│   └── main.py                  # FastAPI app, lifespan, middleware
+│   │   ├── client_service.py
+│   │   ├── product_service.py
+│   │   └── order_service.py
+│   │
+│   └── main.py
+│
 ├── frontend/
 │   ├── src/
-│   │   ├── types.ts             # TypeScript інтерфейси
-│   │   ├── api.ts               # HTTP клієнт
-│   │   ├── app.ts               # UI логіка
-│   │   └── main.ts              # точка входу
+│   │   ├── types.ts
+│   │   ├── api.ts
+│   │   ├── app.ts
+│   │   └── main.ts
 │   ├── index.html
 │   ├── nginx.conf
 │   ├── Dockerfile
 │   └── vite.config.ts
+│
 ├── tests/
-│   ├── conftest.py              # fixtures, test DB setup
+│   ├── conftest.py
 │   ├── test_clients.py
 │   ├── test_products.py
 │   └── test_orders.py
+│
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
@@ -139,3 +147,8 @@ pytest -v
 **Розділення на шари** (router → service → model) — роутери тонкі, вся бізнес-логіка в сервісах, легко тестувати і розширювати.
 
 **UUID як PK** — стандарт для ERP систем, уникає конфліктів при міграції даних між середовищами.
+
+## Скріншоти
+<img width="1915" height="905" alt="image" src="https://github.com/user-attachments/assets/63cc6d15-b3f3-4514-86c6-ab801d77efac" />
+<img width="1918" height="907" alt="image" src="https://github.com/user-attachments/assets/2da4f975-13a8-4dad-839c-3eb62551f888" />
+<img width="1913" height="901" alt="image" src="https://github.com/user-attachments/assets/54838fd3-0a7c-43cb-9950-572cb22351d4" />
